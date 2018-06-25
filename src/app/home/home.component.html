@@ -1,0 +1,58 @@
+<!-- MENU -->
+<div class="menuGradient">
+  <nav class="navbar navbar-expand-lg ">
+    <img src="assets/logo_live.png" class="logoImg" alt="">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link whiteColor" href="#">MSN Alive! <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link whiteColor" href="#">Configuración</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link whiteColor" href="#">Acerca De</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<!-- PERSONAL -->
+<div class="gradientBlue">
+  <div class="row" >
+    <div class="col-1">
+      foto
+    </div>
+    <div class="col-2">
+      <div class="row">
+        <div class="col-6">
+          nick
+        </div>
+        <div class="col-6">
+          status
+        </div>
+      </div>
+      <div class="row">
+        mi subick
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    aqui nada
+  </div>
+
+</div>
+<!-- SEARCH AND ADD -->
+<hr>
+<div class="row">
+  <div class="col-11">
+    <input type="text" class="w100" placeholder="Buscar un contacto o un número...">
+  </div>
+  <div class="col-1">
+    <img src="assets/logo_live_add.png" class="addImg" alt="">
+  </div>
+</div>
+<hr>
+<!-- FRIENDS LIST -->
+<ul>
+  <li routerLink="/conversation/{{user.userId}}" *ngFor="let user of users">{{user.nick}}</li>
+</ul>
