@@ -17,7 +17,7 @@ export class UserService {
   }
   getUserById( userId){
     let user = {};
-    debugger;
+  
     user = this.users.filter( (u) => {
       return u.userId == userId;
     })[0];

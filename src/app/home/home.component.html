@@ -1,58 +1,48 @@
-<!-- MENU -->
-<div class="menuGradient">
-  <nav class="navbar navbar-expand-lg ">
-    <img src="assets/logo_live.png" class="logoImg" alt="">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link whiteColor" href="#">MSN Alive! <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link whiteColor" href="#">Configuración</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link whiteColor" href="#">Acerca De</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+
 <!-- PERSONAL -->
-<div class="gradientBlue">
-  <div class="row" >
-    <div class="col-1">
-      foto
-    </div>
-    <div class="col-2">
-      <div class="row">
-        <div class="col-6">
-          nick
-        </div>
-        <div class="col-6">
-          status
+<div class="bgImg">
+  <div class="whiteBorder p10">
+    <div class="transp" > 
+      <div class="inlineBlock">
+        <img src="assets/logo_live_online.png" class="profilePic" alt="">
+        <div class="inlineBlock ml10" *ngIf="myUser">
+          <span>{{myUser.nick}} </span>
+          <a href="" class="ml10">{{myUser.status}}</a>
+          <br>
+          <span>{{myUser.subnick}} </span>
         </div>
       </div>
-      <div class="row">
-        mi subick
-      </div>
+      <br>
     </div>
-  </div>
-
-  <div class="row">
-    aqui nada
-  </div>
-
+  </div> 
 </div>
 <!-- SEARCH AND ADD -->
 <hr>
-<div class="row">
+<div class="row" style="margin:1px;">
   <div class="col-11">
     <input type="text" class="w100" placeholder="Buscar un contacto o un número...">
   </div>
-  <div class="col-1">
-    <img src="assets/logo_live_add.png" class="addImg" alt="">
+  <div class="col-1 rightAl">
+    <img routerLink="/newUser" src="assets/logo_live_add.png" class="addImg cursor" alt="">
   </div>
 </div>
 <hr>
 <!-- FRIENDS LIST -->
-<ul>
-  <li routerLink="/conversation/{{user.userId}}" *ngFor="let user of users">{{user.nick}}</li>
-</ul>
+<div class="p10">
+  <span (click)="showHideList()" class="bold cursor">
+    <a>
+      <i *ngIf="showFriends" class="fas fa-angle-down"></i>
+      <i *ngIf="!showFriends" class="fas fa-angle-right"></i>
+    </a>
+    Amigos (11/11)
+  </span>
+  <ul *ngIf="showFriends" class="friendsList">
+    <li routerLink="/conversation/{{user.user_id}}" 
+        *ngFor="let user of users"
+        class="mt5">
+        <img class="statusImg mr15" src="assets/logo_live_online.png" alt="">
+        <span class="bold">{{user.nick}} - </span>
+        <span >{{user.subnick}}</span>
+    </li>
+  </ul>
+</div>

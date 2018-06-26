@@ -7,3 +7,34 @@
 .ml10 {
     margin-left:10px;
 }
+.p10 {
+    padding: 10px;
+}
+.navbar {
+    padding:3px !important;
+}
+.rightAl {
+    text-align: right;
+}
+.bold {
+    font-weight: bold;
+}
+.mr15 {
+    margin-right:15px;
+}
+.mt5 {
+    margin-top:5px;
+}
+.cursor {
+    cursor: pointer;
+}
+.inlineBlock {
+    display: inline-block
+}
+.whiteBorder {
+    border:1px solid white;  
+}
+.title {
+    color: rgb(1, 126, 243);
+    
+}

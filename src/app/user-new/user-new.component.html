@@ -1,0 +1,42 @@
+<div class="container">
+  <h3 class="title">Create a new User</h3>
+  <form>
+    <div class="row">
+      <div class="form-group col-6">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="user.name" name="name" required>
+      </div>
+      <div class="form-group col-6">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" [(ngModel)]="user.email" name="email" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-6">
+        <label for="nick">Nick</label>
+        <input type="text" class="form-control" [(ngModel)]="user.nick" name="nick" required>
+      </div>
+      <div class="form-group col-6">
+        <label for="subnick">SubNick</label>
+        <input type="text" class="form-control" [(ngModel)]="user.subnick" name="subnick">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-6">
+        <label for="status">Status</label>
+        <select class="form-control" id="sel1" name="status" [(ngModel)]="user.status">
+          <option>Online</option>
+          <option>Busy</option>
+          <option>Away</option>
+          <option>Offline</option>
+        </select>
+      </div>
+      <div class="form-group col-6">
+        <label for="avatar">Avatar</label>
+        <input type="text" class="form-control" [(ngModel)]="user.avatar" name="avatar">
+      </div>
+    </div>
+    <button type="button" (click)="addUser()" routerLink="/home" class="btn btn-success">Create</button>
+    <button routerLink="/home" type="button" class="btn btn-danger ml10">Cancel</button>
+  </form>
+</div>
