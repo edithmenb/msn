@@ -39,7 +39,7 @@
   <ul *ngIf="showFriends" class="friendsList">
     <li routerLink="/conversation/{{user.user_id}}" 
         *ngFor="let user of users"
-        class="mt5">
+        class="mt5 cursor">
         <img class="statusImg mr15" src="assets/logo_live_online.png" alt="">
         <span class="bold">{{user.nick}} - </span>
         <span >{{user.subnick}}</span>

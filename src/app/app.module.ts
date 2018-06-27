@@ -13,12 +13,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ConversationComponent } from './conversation/conversation.component';
 import { UserNewComponent } from './user-new/user-new.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'newUser', component: UserNewComponent },
-  { path: 'conversation/:userId', component: ConversationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'conversation/:user_id', component: ConversationComponent },
 ];
 
 @NgModule({
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     ConversationComponent,
-    UserNewComponent
+    UserNewComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

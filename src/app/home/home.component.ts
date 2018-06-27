@@ -1,4 +1,3 @@
-import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { UserFirebaseService } from '../user-firebase.service';
 

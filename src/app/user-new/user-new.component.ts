@@ -30,4 +30,5 @@ export class UserNewComponent implements OnInit {
       alert('No se pudo agregar el usuario');
       console.log(error);
     });
+  }
 }
