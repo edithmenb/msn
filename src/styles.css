@@ -1,17 +1,32 @@
 .bold {
     font-weight: bold;
 }
+.borders {
+    border: 1px solid #ced4da;
+}
+.centeredText {
+    text-align: center;
+}
 .cursor {
     cursor: pointer;
 }
 .inlineBlock {
     display: inline-block
 }
+.marAuto {
+    margin:auto;
+}
 .ml3 {
     margin-left: 3px;
 }
+.ml10 {
+    margin-left: 10px;
+}
 .m5 {
     margin:5px;
+}
+.m10 {
+    margin:10px;
 }
 .ml10 {
     margin-left:10px;

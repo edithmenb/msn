@@ -5,6 +5,16 @@
     background-image: url("/assets/msnbg.jpg");
     background-size: 100%;
 }
+.edit {
+    color:rgb(16, 103, 235);
+}
+.logOut {
+    position: relative;
+    left:10px;
+    color:red;
+    text-align: right
+
+}
 .profilePic {
     background-color: white;
     width: 110px;

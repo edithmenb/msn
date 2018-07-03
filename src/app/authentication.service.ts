@@ -15,4 +15,10 @@ export class AuthenticationService {
   emailLogin( email, password) {
     return this.angularFireAuth.auth.signInAndRetrieveDataWithEmailAndPassword(email, password);
   }
+  getStatus() {
+    return this.angularFireAuth.authState;
+  }
+  logOut() {
+    return this.angularFireAuth.auth.signOut();
+  }
 }

@@ -14,12 +14,18 @@ import { HomeComponent } from './home/home.component';
 import { ConversationComponent } from './conversation/conversation.component';
 import { UserNewComponent } from './user-new/user-new.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { SearchPipe } from './pipes/search';
+import { FriendComponent } from './friend/friend.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'newUser', component: UserNewComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'pipes', component: PipesComponent },
   { path: 'conversation/:user_id', component: ConversationComponent },
 ];
 
@@ -29,7 +35,11 @@ const appRoutes: Routes = [
     HomeComponent,
     ConversationComponent,
     UserNewComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+    PipesComponent,
+    SearchPipe,
+    FriendComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,17 @@
-
 <!-- PERSONAL -->
 <div class="bgImg">
   <div class="whiteBorder p10">
     <div class="transp" > 
+        <div class="mr15" style="float: right">
+            <i routerLink="/profile" class="fas fa-edit edit cursor "></i>  
+            <i (click)="logOut()" class="fas fa-sign-out-alt logOut cursor "></i>  
+        </div>
       <div class="inlineBlock">
         <img src="assets/logo_live_online.png" class="profilePic" alt="">
         <div class="inlineBlock ml10" *ngIf="myUser">
           <span>{{myUser.nick}} </span>
           <a href="" class="ml10">{{myUser.status}}</a>
+          
           <br>
           <span>{{myUser.subnick}} </span>
         </div>
@@ -20,7 +24,7 @@
 <hr>
 <div class="row" style="margin:1px;">
   <div class="col-11">
-    <input type="text" class="w100" placeholder="Buscar un contacto o un número...">
+    <input type="text" class="w100" [(ngModel)]="query" placeholder="Buscar un contacto o un número...">
   </div>
   <div class="col-1 rightAl">
     <img routerLink="/newUser" src="assets/logo_live_add.png" class="addImg cursor" alt="">
@@ -36,11 +40,12 @@
     </a>
     Amigos (11/11)
   </span>
+  <app-friend *ngFor="let user of users" [user_id]="user.user_id"></app-friend>
   <ul *ngIf="showFriends" class="friendsList">
     <li routerLink="/conversation/{{user.user_id}}" 
-        *ngFor="let user of users"
+        *ngFor="let user of users | search: query"
         class="mt5 cursor">
-        <img class="statusImg mr15" src="assets/logo_live_online.png" alt="">
+        <img class="statusImg mr15" src="assets/logo_live_{{user.status}}.png" alt="">
         <span class="bold">{{user.nick}} - </span>
         <span >{{user.subnick}}</span>
     </li>
