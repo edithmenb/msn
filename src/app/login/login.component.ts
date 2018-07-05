@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   registeredUid: any;
   user: any;
   loginBool= true;
+  nick: string;
 
   constructor( public authenticationService: AuthenticationService, public userFirebaseService: UserFirebaseService,
                public router: Router) { }
@@ -54,12 +55,12 @@ export class LoginComponent implements OnInit {
   insertOnDatabase(uid) {
     const user = {
       user_id: uid,
-      name: this.name,
+      nick: this.nick,
       email: this.email
     };
     const promise = this.userFirebaseService.createUser(user);
     promise.then( (data) => {
-      //console.log(data);
+      console.log(data);
     }).catch( (error) => {
       console.log(error);
     });

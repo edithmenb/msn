@@ -19,7 +19,9 @@ export class UserFirebaseService {
     return this.angularFireDatabase.object('users/' + id).remove();
   }
   createUser(user) {
+    console.log(user);
     return this.angularFireDatabase.object('users/' + user.user_id).set(user);
+    
   }
   editUser(user) {
     return this.angularFireDatabase.object('users/' + user.user_id).set(user);

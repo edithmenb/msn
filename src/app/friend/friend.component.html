@@ -1,3 +1,8 @@
-<p>
-  friend works! {{user_id}}
-</p>
+
+    <div *ngIf="friend" routerLink="/conversation/{{friend.user_id}}" 
+        class="mt5 cursor">
+        <img class="statusImg mr15" src="assets/logo_live_{{friend.status}}.png" alt="">
+        <span class="bold">{{friend.nick}} - </span>
+        <span >{{friend.subnick}}</span>
+    </div>
+  

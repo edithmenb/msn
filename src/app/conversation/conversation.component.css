@@ -27,7 +27,7 @@
     text-align: center;
 }
 .messages {
-    height: 333px;
+    height: 325px;
 }
 .nick {
     /* font-weight: bold; */
@@ -60,4 +60,8 @@
 .zumbido {
     width: 35px;
     margin-top:5px;
+}
+#messageArea {
+    overflow: scroll;
+    margin-bottom: 10px;
 }

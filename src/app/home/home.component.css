@@ -21,14 +21,7 @@
     border: 5px solid rgb(11, 235, 11);
     border-radius: 20px;
 }
-.statusImg {
-    width:30px;
-}
+
 .transp {
     background-color:rgba(255, 255, 255, 0.603);
-}
-.friendsList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }

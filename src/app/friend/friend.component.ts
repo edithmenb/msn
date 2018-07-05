@@ -8,12 +8,13 @@ import { UserFirebaseService } from '../user-firebase.service';
 })
 export class FriendComponent implements OnInit {
   @Input() user_id:string;
+  friend = null;
   constructor(public userFirebaseService: UserFirebaseService) { }
 
   ngOnInit() {
     const stream = this.userFirebaseService.getUserById(this.user_id);
     stream.valueChanges().subscribe( (result) => {
-      console.log(result);
+      this.friend = result;
     });
   }
 
